@@ -1,0 +1,58 @@
+﻿@page
+@model Taller.App.Front.Pages.GestionMecanicoModel
+@{
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Ciudad</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    @foreach (Mecanic m in Model.listaMecanicos)
+    {
+
+      <tr>
+        <th scope="row">1</th>
+        <td>@m.nombre</td>
+        <td>@m.especialidad</td>
+        <td>@m.ciudad</td>
+
+      </tr>
+
+    }
+
+  </tbody>
+</table>
+
+<hr> 
+
+<div class="card p-3" style="width: 18rem;">
+ 
+
+
+<form method="post">
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre Mecanico</label>
+    <input type="text" class="form-control" id="idNombre" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="especialidad" class="form-label">Especialidad</label>
+    <input type="text" class="form-control" id="idEspecialidad">
+  </div>
+
+   <div class="mb-3">
+    <label for="ciudad" class="form-label">Ciudad</label>
+    <input type="text" class="form-control" id="idCiudad">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Agregar</button>
+</form>
+
+</div>
